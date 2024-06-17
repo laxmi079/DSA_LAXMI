@@ -35,7 +35,8 @@ bool dfs(int src,int parent,unordered_set<int>&vis)
     }
     if(!vis.count(neighbour))
     {
-        dfs(neighbour,src,vis);
+        bool res=dfs(neighbour,src,vis);
+        if(res==true) return true;
     }
  }
  return false;
