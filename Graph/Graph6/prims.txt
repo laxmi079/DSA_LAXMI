@@ -1,0 +1,8 @@
+DS- visited,priority_queue<pair> , unordered_map
+onsert the pair of<0,src> to the pq;
+one by one rempve the rppt element from the pq;
+if the root element is already visited then we will just continue
+we mark the root visited
+we store the wt of the paor in abs
+update mapping
+go to every neighbour of the curr element and only add those which are non visited and have a better wt proposition
