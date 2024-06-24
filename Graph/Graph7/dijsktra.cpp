@@ -10,20 +10,20 @@ gr[u].push_back({v,wt});
 if(bidir) gr[v].push_back({u,wt});
 }
 
-unordered_map<int,int> dijskra(int src,int n)
+unordered_map<int,int> dijskra(int src,int n)  //O(VlogV + ElogV)
 {
  priority_queue<pp,vector<pp>,greater<pp>>pq;
  unordered_set<int>vis;
  vector<int>via(n+1);
  unordered_map<int,int>mp;
- for(int i=0;i<n;i++)
+ for(int i=0;i<n;i++) //O(V)
  {
     mp[i]=INT_MAX;
  }
  pq.push({0,src});  //wt,node
  mp[src]=0;
 
- while(!pq.empty())
+ while(!pq.empty())  //O((V+E)logV)
  {
      pp curr=pq.top();
      if(vis.count(curr.second)){
