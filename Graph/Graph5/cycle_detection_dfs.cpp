@@ -72,6 +72,6 @@ int main()
    display();
    cout<<endl;
    bool p= has_cycle();
-           if(p==true) cout<<"cycle detected\n";
+   if(p==true) cout<<"cycle detected\n";
       
 }

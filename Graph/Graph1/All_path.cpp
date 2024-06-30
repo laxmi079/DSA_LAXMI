@@ -22,7 +22,7 @@ void dfs(int curr,int end,vector<int>path)
     return;
    }
    visited.insert(curr);
-   path.push_back(curr);
+   path.push_back(curr); 
    for(auto neighbour:graph[curr])
    {
     if(visited.find(neighbour)==visited.end())
